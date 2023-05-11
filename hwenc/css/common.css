@@ -1,7 +1,7 @@
 body {
   font-size: 30px;
   color: yellowgreen;
-  font-family: "TTTtangsbudaejjigaeB", "Noto Sans KR";
+  font-family: "Noto Sans KR", "TTTtangsbudaejjigaeB";
   font-weight: 400;
   /* 몇 몇 태그들은 부모의 속성을 물려받지 않는 것들도 있다. */
 }
