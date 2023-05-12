@@ -4,3 +4,13 @@
   object-fit: cover;
 }
 /* viewport-height */
+.business .list {
+  color: #111;
+}
+.business .list li {
+  width: calc(25%-40px);
+  margin: 0 20px;
+}
+.business .list li .img-box {
+  display: none;
+}

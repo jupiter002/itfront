@@ -3,7 +3,6 @@ body {
   color: yellowgreen;
   font-family: "Noto Sans", "TTTtangsbudaejjigaeB";
   font-weight: 400;
-  min-height: 2000px;
   /* 몇 몇 태그들은 부모의 속성을 물려받지 않는 것들도 있다. */
 }
 a {
@@ -11,16 +10,4 @@ a {
   text-decoration: none;
   color: inherit;
   font-family: Georgia, "Times New Roman", Times, serif;
-}
-.container {
-  width: 1200px;
-  /* margin-left: auto;
-  margin-right: auto; */
-  margin: 0 auto;
-  outline: 1px solid #f00;
-}
-h2 {
-  font-size: 36px;
-  font-weight: 500;
-  margin-bottom: 50px;
 }
