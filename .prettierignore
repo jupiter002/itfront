@@ -1,0 +1,4 @@
+ *.min.css       
+#.min.css로 끝나는 모든 파일들 prittier무시
+hwenc/**/*.css
+#hwenc폴더안에 있는 모든 폴더들 prittier무시

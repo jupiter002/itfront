@@ -1,16 +1,81 @@
 .main-visual video {
   width: 100%;
-  height: 300%;
-  object-fit: cover;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
 /* viewport-height */
+.business {
+  padding: 150px 0;
+}
 .business .list {
+  display: flex;
   color: #111;
 }
 .business .list li {
-  width: calc(25%-40px);
-  margin: 0 20px;
+  width: 25%;
+  position: relative;
+}
+.business .list li:hover .img-box {
+  transform: translateY(0);
+  opacity: 1;
+}
+.business .list li:nth-child(1) a::before {
+  background-image: url(../image/main/main_business_icon01.png);
+}
+.business .list li:nth-child(2) a::before {
+  background-image: url(../image/main/main_business_icon02.png);
+}
+.business .list li:nth-child(3) a::before {
+  background-image: url(../image/main/main_business_icon03.png);
+}
+.business .list li:nth-child(4) a::before {
+  background-image: url(../image/main/main_business_icon04.png);
+}
+.business .list li a {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid #f60;
+  aspect-ratio: 1/1.3;
+}
+.business .list li a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 .business .list li .img-box {
-  display: none;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(100px);
+  position: absolute;
+  top: 0;
+  transition: all 0.25s ease;
+}
+.business .list li .img-box .text {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+}
+.business .list li .img-box .text h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px;
+}
+.business .list li .img-box .text h3 p {
+  font-size: 20px;
+}
+.business .list li .img-box img {
+  width: 100%;
 }

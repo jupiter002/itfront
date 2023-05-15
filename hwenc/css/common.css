@@ -10,17 +10,17 @@ a {
   /*부모의 속성을 상속받지 않는 태그들을 상속하려면 inherits 을 쓴다*/
   text-decoration: none;
   color: inherit;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family:Times, serif;
 }
 .container {
   width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
-  outline: 1px solid #f00;
+  /* outline: 1px solid #f00; */
 }
 h2 {
   font-size: 36px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 50px;
 }
