@@ -1,0 +1,81 @@
+.header{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto";
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 99;
+}
+
+.header::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #474343;
+    position: absolute;
+    top: 100px;
+}
+
+.header:hover{
+    height: 350px;
+    background-color: rgba(10, 10, 10, 0.8);
+    transition: all 0.25s ease;
+}
+
+.header .logo{
+    position: absolute;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+.list {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: #ccc;
+
+}
+.list .depth-01{
+    font-size: 20px;
+    font-weight: 500;
+    height:100px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 50px;
+    transition:  all 0.25s ease;
+    
+}
+.list .depth-01:hover{
+    color: yellow;
+}
+.list .depth-02{
+    text-align:center;
+    padding-top: 10px;
+}
+.list .depth-02::after{
+    margin-left: 250px solid #474343;
+    padding-left: 250px;
+    color: #474343;
+    
+}
+.list .depth-02 li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    align-content: center;
+    height: 20px;
+    padding: 10px 0;
+}
+.list .depth-02 li a:hover{
+    color:yellow;
+}
