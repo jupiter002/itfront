@@ -9,6 +9,7 @@
   /* left: 100px;
     top: 100px; */
 }
+
 .header:after {
   content: "";
   display: block;
@@ -18,62 +19,91 @@
   position: absolute;
   top: 100px;
 }
+
 .header.on {
   height: 350px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
 .header.on .list {
   color: #111;
 }
+
 .header.on .logo a .black {
   opacity: 1;
+  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
+
 .header.on .logo a .white {
   opacity: 0;
+  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
+
 .header .logo {
   position: absolute;
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* outline: 1px solid #f00; */
   padding-right: 50px;
   padding-left: 50px;
 }
+
 .header .logo a .white {
   position: absolute;
+  -webkit-transition: all 0, 25s ease;
+  transition: all 0, 25s ease;
 }
+
 .header .logo a .black {
   opacity: 0;
+  -webkit-transition: all 0, 25s ease;
+  transition: all 0, 25s ease;
 }
 
 .gnb .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #fff;
 }
-.gnb .list > li:hover .depth01 {
-  color: #f60;
-}
+
 .gnb .list > li .depth01 {
   position: relative;
   font-size: 20px;
   font-weight: 500;
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   border-bottom: 2px solid transparent;
   /* outline: 1px solid #ff0000; */
 }
+
 .gnb .list > li .depth01::after {
-  content: ""; /*내용을 넣어야지만 화면에 보여진다*/
+  content: "";
+  /*내용을 넣어야지만 화면에 보여진다*/
   display: block;
   width: 100%;
   height: 3px;
@@ -81,25 +111,42 @@
   position: absolute;
   left: 0;
   bottom: -2px;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  z-index: 1; /*z-index를 사용하려면 position을 사용해야함*/
+  z-index: 1;
+  /*z-index를 사용하려면 position을 사용해야함*/
 }
-.gnb .depth02 {
+
+.gnb .list > li:hover .depth01 {
+  color: #f60;
+}
+
+.gnb .list > li:hover .depth01::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.gnb .list > li .depth02 {
   text-align: center;
   font-size: 16px;
   padding-top: 10px;
 }
-.gnb .depth02 li a {
+
+.gnb .list > li .depth02 li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-.gnb .depth02 :hover {
-  color: #f60;
 }
 
 .popup {
@@ -110,8 +157,10 @@
   padding: 15px;
   left: 100px;
   top: 100px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
+
 .popup .content {
   width: 400px;
   height: 400px;
@@ -124,10 +173,10 @@
     li{
       depth{
         font-size:20px;
-
+  
       }
       .depth01{
-
+  
       }
     }
   } */
