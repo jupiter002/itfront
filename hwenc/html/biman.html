@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="biman">
+      <div class="calc">
+        <label><span>키</span><input type="text" class="height" id="height" placeholder="키를 입력해주세요 ex)180" /></label>
+        <label><span>몸무게</span><input type="text" class="weight" id="weight" placeholder="몸무게를 입력해주세요 ex) 90" /></label>
+        <button class="btn_calc">측정하기</button>
+        <button class="btn_reset">초기화</button>
+      </div>
+      <div class="result"></div>
+    </div>
+    <script>
+      const height = document.querySelector("#height");
+      const weight = document.querySelector("#weight");
+      const btnCalc = document.querySelector(".btn_calc");
+      const btnReset = document.querySelector(".btn_reset");
+      const result = document.querySelector(".result");
+
+      btnCalc.addEventListener("click", function () {
+        // console.log("click");
+        // console.log(height.value);
+        const heightValue = height.value / 100; // 값을 바꾸지 않을때는 const, 값을 바꿔야 할때는 let을 사용
+        const weightValue = weight.value;
+        const resultValue = weightValue / (heightValue * heightValue);
+
+        if (resultValue > 18.5 && resultValue < 23.5) {
+          result.textContent =
+            resultValue + // 글자만 넣을거면 textContent, 태그를 사용할거면 innerHTML을 사용
+            " / " +
+            "정상입니다.";
+        } else if (resultValue >= 23.5 && resultValue < 25) {
+          result.textContent = resultValue + " / " + "과체중입니다.";
+        } else if (resultValue >= 25 && resultValue < 30) {
+          result.textContent = resultValue + " / " + "경도비만입니다.";
+        } else if (resultValue >= 30) {
+          result.textContent = resultValue + " / " + "중증도비만입니다.";
+        }
+      });
+      btnReset.addEventListener("click", function () {
+        height.value = "";
+        weight.value = "";
+        result.remove();
+      });
+    </script>
+  </body>
+</html>

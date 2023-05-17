@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label><span>금액</span><input type="text" class="money" placeholder="금액을 입력해주세요." /></label>
+    <button class="btn_calc">계산하기</button>
+    <button class="btn_reset">초기화</button>
+    <div class="result"></div>
+    <script>
+      const money = document.querySelector(".money"); // class에 접근할때는 .연산자, id에 접근할때는 #연산자
+      const btnCalc = document.querySelector(".btn_calc");
+      const btnReset = document.querySelector(".btn_reset");
+      const result1 = document.querySelector(".result");
+      let print1 = [];
+      const moneyArray = [10000, 1000, 100, 10];
+
+      btnCalc.addEventListener("click", function () {
+        let moneyValue = money.value;
+        // const m50000 = Math.floor(moneyValue / 50000);
+        // moneyValue = moneyValue % 50000;
+        // const m10000 = Math.floor(moneyValue / 10000);
+        // moneyValue = moneyValue % 10000;
+        // const m5000 = Math.floor(moneyValue / 5000);
+        // moneyValue = moneyValue % 5000;
+        // const m1000 = Math.floor(moneyValue / 1000);
+        // moneyValue = moneyValue % 1000;
+        // const m500 = Math.floor(moneyValue / 500);
+        // moneyValue = moneyValue % 500;
+        // const m100 = Math.floor(moneyValue / 100);
+        // moneyValue = moneyValue % 100;
+        // const m50 = Math.floor(moneyValue / 50);
+        // moneyValue = moneyValue % 50;
+        // const m10 = Math.floor(moneyValue / 10);
+        // moneyValue = moneyValue % 10;
+        // result1.textContent = `오만원 ${m50000}장 만원 ${m10000}장 오천원 ${m5000}장 천원 ${m1000}장 500원 ${m500}개 백원 ${m100}개 오십원 ${m50}개 십원 ${m10}개`;
+
+        for (let i = 4; i >= 1; i--) {
+          print1[i] = Math.floor(moneyValue / 10 ** i);
+          moneyValue = moneyValue % 10 ** i;
+          //   if (i == 4) {
+          //     print1[i] = Math.floor(moneyValue / 10000);
+          //   } else if (i == 3) {
+          //     print1[i] = Math.floor(moneyValue / 1000);
+          //   } else if (i == 2) {
+          //     print1[i] = Math.floor(moneyValue / 100);
+          //   } else if (i == 1) {
+          //     print1[i] = Math.floor(moneyValue / 10);
+          //   }
+        }
+        for (let j = 0; j < 4; j++) {
+          result1.textContent = `${moneyArray[j]} 원  ${print1[j]} 장`;
+        }
+      });
+    </script>
+  </body>
+</html>

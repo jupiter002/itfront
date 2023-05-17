@@ -1,4 +1,5 @@
-$main-color: #f60;
+@import "vars";
+
 .header {
   position: absolute;
   width: 100%;
@@ -17,7 +18,7 @@ $main-color: #f60;
     position: absolute;
     top: 100px;
   }
-  &:hover {
+  &.on {
     height: 350px;
     background-color: rgba(255, 255, 255, 1);
     transition: all 0.5s ease;
@@ -77,19 +78,20 @@ $main-color: #f60;
         transition: all 0.25s ease;
         border-bottom: 2px solid transparent;
         /* outline: 1px solid #ff0000; */
-      }
-      &::after {
-        content: ""; /*내용을 넣어야지만 화면에 보여진다*/
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: $main-color;
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        transform: scaleX(0);
-        transition: all 0.25s ease;
-        z-index: 1; /*z-index를 사용하려면 position을 사용해야함*/
+
+        &::after {
+          content: ""; /*내용을 넣어야지만 화면에 보여진다*/
+          display: block;
+          width: 100%;
+          height: 3px;
+          background-color: $main-color;
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          transform: scaleX(0);
+          transition: all 0.25s ease;
+          z-index: 1; /*z-index를 사용하려면 position을 사용해야함*/
+        }
       }
     }
   }
