@@ -250,3 +250,88 @@
     }
   }
 }
+.social {
+  overflow: hidden;
+  .list {
+    li {
+      a {
+        .img-box {
+          position: relative;
+          img {
+            width: 100%;
+          }
+          .icon {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 100px;
+
+            background-position: 50%;
+            background-repeat: no-repeat;
+            &.blog {
+              background-image: url("../images/main/social_blog.png");
+            }
+            &.youtube {
+              background-image: url("../images/main/social_youtube.png");
+            }
+          }
+        }
+        h3 {
+          font-size: 18px;
+          line-height: 1.25;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .controlbox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: end;
+    margin-left: 20px;
+
+    button {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 100px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+    }
+  }
+  .pagination {
+    position: relative;
+    flex-grow: 1; // 여백 나누기.. 남아있는 여백을 비율만큼 가져감
+    //width: 70%;
+    .swiper-pagination-progressbar-fill {
+      background-color: $main-color;
+    }
+  }
+}
+
+.more {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  &:after {
+    font-family: "Material Icons";
+    content: "\e5cc";
+    display: block;
+    margin-top: 3px;
+  }
+}

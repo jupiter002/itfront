@@ -227,3 +227,79 @@
   margin: 20px 0;
   line-height: 1.15;
 }
+
+.social {
+  overflow: hidden;
+}
+.social .list li a .img-box {
+  position: relative;
+}
+.social .list li a .img-box img {
+  width: 100%;
+}
+.social .list li a .img-box .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 100px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.social .list li a .img-box .icon.blog {
+  background-image: url("../images/main/social_blog.png");
+}
+.social .list li a .img-box .icon.youtube {
+  background-image: url("../images/main/social_youtube.png");
+}
+.social .list li a h3 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin-top: 20px;
+}
+.social .controlbox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 30px;
+}
+.social .btns {
+  display: flex;
+  justify-content: end;
+  margin-left: 20px;
+}
+.social .btns button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.social .pagination {
+  position: relative;
+  flex-grow: 1;
+}
+.social .pagination .swiper-pagination-progressbar-fill {
+  background-color: #f60;
+}
+
+.more {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  display: flex;
+  align-items: center;
+}
+.more:after {
+  font-family: "Material Icons";
+  content: "\e5cc";
+  display: block;
+  margin-top: 3px;
+}
