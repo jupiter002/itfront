@@ -27,6 +27,42 @@ gnbList.forEach(function (item, idx) {
     header.classList.remove("on");
   });
 });
+
+//자바스크립트의 함수는 일급객체 : 함수를 변수에 할당할 수 있다
+// 다른함수를 인자(argument)로 전달 받을 수있다.
+// 다른함수의 결과로서 리턴 가능하다. 데이터 처럼 다룰 수 있다.
+
+function bb() {
+  //함수선언문 호출부터 가능
+  console.log("함수 선언문입니다.");
+}
+const aa = () => console.log("함수 표현식이빈다");
+
+bb();
+aa();
+
+const sum = (a, b) => a + b; // 한줄로 작성시에는 중괄호와 return생략가능
+console.log(sum(110, 100));
+
+//prettier-ignore 로 num의 소괄호 까지 생략가능
+const double = (num) => num * 2;
+
+// 화살표 함수 fat arrow function 자바 lamda
+
+const contentList = document.querySelectorAll(".master-piece .contents li");
+
+menu.forEach((item, idx) => {
+  //익명함수, 쿨백함수
+  item.addEventListener("mouseenter", () => {
+    //console.log(idx + "번째 입니다.");
+    contentList.forEach((item02, idx02) => {
+      item02.classList.remove("on");
+    });
+    const target = document.querySelector(`.master-piece .contents li:nth-child(${idx + 1})`); //backtit
+    target.classList.add("on");
+  });
+});
+
 // 진짜 배열은 아님. 그러므로 배열의 메소드는 쓸 수 없음.
 //console.log(menu);
 // for (let i = 0; i <= menu.length; i++) {
