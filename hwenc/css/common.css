@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   font-size: 30px;
-  color: rgb(0, 0, 0);
+  color: black;
   font-family: "Noto Sans", "TTTtangsbudaejjigaeB";
   font-weight: 400;
   min-height: 2000px;

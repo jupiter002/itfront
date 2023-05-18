@@ -49,22 +49,22 @@
     a {
       .white {
         position: absolute;
+        transition: all 0, 25s ease;
       }
       .black {
         opacity: 0;
+        transition: all 0, 25s ease;
       }
     }
   }
 }
+
 .gnb {
   .list {
     display: flex;
     justify-content: center;
     color: #fff;
     > li {
-      &:hover .depth01 {
-        color: #f60;
-      }
       .depth01 {
         position: relative;
         font-size: 20px;
@@ -78,7 +78,6 @@
         transition: all 0.25s ease;
         border-bottom: 2px solid transparent;
         /* outline: 1px solid #ff0000; */
-
         &::after {
           content: ""; /*내용을 넣어야지만 화면에 보여진다*/
           display: block;
@@ -93,22 +92,25 @@
           z-index: 1; /*z-index를 사용하려면 position을 사용해야함*/
         }
       }
-    }
-  }
-  .depth02 {
-    text-align: center;
-    font-size: 16px;
-    padding-top: 10px;
-    li a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    :hover {
-      color: #f60;
+      &:hover .depth01 {
+        color: $main-color;
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+      .depth02 {
+        text-align: center;
+        font-size: 16px;
+        padding-top: 10px;
+        li a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
     }
   }
 }
