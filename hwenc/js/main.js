@@ -75,6 +75,20 @@ menu.forEach((item, idx) => {
 //     alert(i + 1 + "번째 입니다.");
 //   });
 // }
+
+const MainSwiper = new Swiper(".main-visual .mask", {
+  speed: 400,
+  loop: true,
+  effect: "fade",
+  navigation: {
+    nextEl: ".main-visual .btns .btn-next",
+    prevEl: ".main-visual .btns .btn-prev",
+  },
+  pagination: {
+    el: ".main-visual .pagination",
+    type: "fraction",
+  },
+});
 //prettier-ignore
 const fruits = ["apple", "melon", "peach"];
 const swiper = new Swiper(".social .mask", {

@@ -1,12 +1,96 @@
 @import "vars";
 .main {
-  &-visual video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+  &-visual {
+    video {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+    .mask {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      .list {
+        li {
+          .img {
+            height: 100vh; // 모니터 크기의 100%
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .txt {
+            position: absolute;
+            top: 60%;
+            left: 200px;
+            line-height: 1.5;
+            color: #fff;
+            .main {
+              font-size: $h2;
+              font-weight: 700;
+              line-height: 1.2;
+              &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #ffffff;
+                margin: 20px 0;
+              }
+            }
+
+            .sub {
+              font-size: $h4;
+            }
+          }
+          @for $i from 1 to 6 {
+            &.visual0#{$i} .img {
+              //loop쓸때 nth-child()를 쓰면 정렬이 흐트러짐
+              background-image: url("../images/main/visual0#{$i}.jpg");
+            }
+          }
+        }
+      }
+      .btns {
+        position: absolute;
+        left: 200px;
+        bottom: 50px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        background-color: $main-color;
+
+        .pagination {
+          width: auto;
+
+          color: #fff;
+          font-size: $h3;
+          font-family: "Noto Sans KR";
+          padding: 0 20px;
+          height: 100%;
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+          border-radius: 100px;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
-
 // .main-visual video {
 //   width: 100%;
 //   height: 300%;
@@ -42,7 +126,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        outline: 1px solid #f60;
+        // outline: 1px solid #f60;
         aspect-ratio: 1/1.3;
 
         &::before {
