@@ -61,6 +61,11 @@ menu.forEach((item, idx) => {
     const target = document.querySelector(`.master-piece .contents li:nth-child(${idx + 1})`); //backtit
     target.classList.add("on");
   });
+  item.addEventListener("mouseleave", () => {
+    contentList.forEach((item02, idx02) => {
+      item02.classList.remove("on");
+    });
+  });
 });
 
 // 진짜 배열은 아님. 그러므로 배열의 메소드는 쓸 수 없음.
@@ -72,3 +77,4 @@ menu.forEach((item, idx) => {
 // }
 
 const fruits = ["apple", "melon", "peach"];
+const swiper = new Swiper(".social .mask", {});

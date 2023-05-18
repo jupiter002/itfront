@@ -7,7 +7,7 @@
 
 /* viewport-height */
 .business {
-  padding: 150px 0;
+  padding-bottom: 30px;
 }
 .business .list {
   display: flex;
@@ -113,11 +113,30 @@
 }
 .master-piece .case .menu li {
   width: 20%;
-  padding: 30px 0;
+  padding: 50px 0;
   text-align: center;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
   transition: all 0.25s ease;
+  position: relative;
+}
+.master-piece .case .menu li span {
+  transition: all 0.25s ease;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.master-piece .case .menu li::after {
+  font-family: "Material Icons";
+  content: "\e8e4";
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 .master-piece .case .menu li:last-child {
   border-right: none;
@@ -125,6 +144,14 @@
 .master-piece .case .menu li:hover {
   background-color: #f60;
   border-right-color: #f60;
+}
+.master-piece .case .menu li:hover span {
+  left: 30px;
+  transform: translate(0, -50%);
+}
+.master-piece .case .menu li:hover::after {
+  opacity: 1;
+  right: 30px;
 }
 .master-piece .case .contents {
   position: absolute;
@@ -174,4 +201,29 @@
 }
 .master-piece .case .contents li .container p {
   font-size: 24px;
+}
+
+.news-room .list {
+  display: flex;
+  justify-content: space-between;
+}
+.news-room .list li {
+  width: calc(33.33% - 20px);
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+.news-room .list li a .img-box {
+  overflow: hidden;
+}
+.news-room .list li a:hover img {
+  transform: scale(1.25);
+}
+.news-room .list li a img {
+  width: 100%;
+  transition: all 0.25s ease;
+}
+.news-room .list li a h3 {
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 1.15;
 }
