@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 .main {
   &-visual {
     video {
@@ -405,7 +406,68 @@
     }
   }
 }
+.banner {
+  //
+  display: flex;
+  color: #fff;
+  > div {
+    padding: 50px 0;
+    display: flex;
+    width: 50%;
+    .inner {
+      width: 600px;
+      // border: 1px solid #f00;
+    }
+  }
+  .forena {
+    background-image: url(../images/main/bg_img01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    justify-content: end;
+    h2 {
+      // text-transform: uppercase; //대문자로 출력
+      // letter-spacing: 20px; //글자간 간격
+      margin-bottom: 0;
+    }
+    s p {
+      font-size: $h4;
+    }
+  }
+  .util-menu {
+    background-image: url(../images/main/bg_img02.jpg);
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 50px;
+      align-items: center;
+      h2 {
+        span {
+          font-size: $h3;
+          display: block;
+          margin-top: 40px;
+        }
+      }
+      ul {
+        li {
+          a {
+            display: block;
+            padding: 10px 0;
+            font-size: $h4;
+            border-bottom: 1px solid #fff;
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+          }
+          &::after {
+            @include icon("\e5cc");
+          }
+        }
+      }
+    }
+  }
+}
+//똑같은 걸 반복한다면 함수를 만들면 된다.
 .more {
   position: absolute;
   right: 0;
@@ -413,8 +475,7 @@
   display: flex;
   align-items: center;
   &:after {
-    font-family: "Material Icons";
-    content: "\e5cc";
+    @include icon("\e5cc");
     display: block;
     margin-top: 3px;
   }
