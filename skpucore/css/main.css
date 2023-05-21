@@ -1,6 +1,5 @@
-.header .main-img img{
+.header .main-img img {
   width: 100%;
-  height: 300%;
+  height: 100vh;
   object-fit: cover;
-  
 }

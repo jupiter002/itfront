@@ -1,0 +1,73 @@
+.header {
+  display: block;
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  z-index: 99;
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 100px;
+  }
+  &:hover {
+    height: 350px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: all 0.5s ease;
+    .list {
+      color: #111;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0% 50px;
+  }
+}
+
+.gnb {
+  .list {
+    display: flex;
+    width: 100%;
+    position: relative;
+    list-style: none;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+    .sort01 {
+      font-size: 20px;
+      font-weight: 500;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 30px;
+      transition: all 0.25s ease;
+    }
+    > li:hover .sort01 {
+      color: blue;
+    }
+    .sort02 {
+      position: relative;
+      text-align: center;
+      li a {
+        font-size: 20px;
+        display: flex;
+        padding: 10px 0;
+        justify-content: center;
+      }
+      li:hover {
+        color: blue;
+      }
+    }
+  }
+}

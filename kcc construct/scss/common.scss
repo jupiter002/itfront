@@ -4,19 +4,14 @@ body {
   color: #111;
   font-family: "Raleway", "Noto Sans KR", "돋움";
   font-weight: 400;
-  min-height: 4000px;
+  min-height: 2000px;
   /* 몇 몇 태그들은 부모의 속성을 물려받지 않는 것들도 있다. */
 }
 
 a {
+  font-size: 30px;
   text-decoration: none;
   color: inherit;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  position: relative;
 }
 
 h2 {
@@ -28,16 +23,4 @@ h2 {
 strong {
   font-weight: 700;
   /* 100/300/400/500/700/900 */
-}
-
-p {
-  line-height: 1.5;
-}
-
-.point-color {
-  color: #f60;
-}
-
-.section {
-  padding: 100px 0;
 }
