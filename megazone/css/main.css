@@ -1,0 +1,13 @@
+.main-visual iframe {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/0.5625;
+}
+.main-visual .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00f;
+  height: 100vh;
+}
