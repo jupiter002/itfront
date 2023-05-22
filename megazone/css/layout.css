@@ -25,11 +25,3 @@
 .header .gnb .list li a {
   padding: 10px;
 }
-.header .content {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  color: #fff;
-  z-index: 100;
-}
