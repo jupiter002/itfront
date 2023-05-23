@@ -17,12 +17,15 @@
       align-items: center;
       color: #fff;
       height: 100vh;
-      // .content {
-      //   position: absolute;
-      //   color: #fff;
-      //    top: 50%;
-      //transform: translateY()
-      //   height: 100vh;
+      //  .content {
+      //  position: absolute;
+      //  color: #fff;
+      //  top: 50%;
+      //  transform: translateY(-50%);
+      //  text-align: center;
+      //  width: 100%;
+
+      //  height: 100vh;
       .word {
         overflow: hidden;
       }
@@ -111,9 +114,10 @@
   }
 }
 .title-box {
-  h1 {
+  h2 {
     font-size: $h1;
     line-height: 1.25;
+    margin-bottom: 60px;
     .mini {
       color: $main-color;
       display: block;

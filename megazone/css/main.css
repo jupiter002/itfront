@@ -94,11 +94,12 @@
   align-items: center;
 }
 
-.title-box h1 {
+.title-box h2 {
   font-size: 48px;
   line-height: 1.25;
+  margin-bottom: 60px;
 }
-.title-box h1 .mini {
+.title-box h2 .mini {
   color: #0b7bff;
   display: block;
   font-size: 18px;
