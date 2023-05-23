@@ -6,22 +6,45 @@
   height: 100px;
   z-index: 99;
 }
+.header .logo a {
+  height: 80px;
+  padding: 0 50px;
+}
 .header .logo a img {
   position: absolute;
   width: 150px;
   height: 50px;
   display: flex;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  opacity: 0;
 }
-.header .gnb .list {
+.header .logo a img.white {
+  opacity: 1;
+}
+.header.on {
+  color: #111;
+  background-color: #fff;
+}
+.header.on .logo img.white {
+  opacity: 0;
+}
+.header.on .logo img.black {
+  opacity: 1;
+}
+
+.gnb .list {
   display: flex;
   justify-content: end;
   color: #fff;
   font-size: 18px;
-  padding: 50px;
 }
-.header .gnb .list li a {
-  padding: 10px;
+.gnb .list li a {
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff;
+  padding: 0 40px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: 500;
+  box-sizing: border-box;
 }
