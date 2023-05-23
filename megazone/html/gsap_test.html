@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메가존.디지털 기업DT 전문가 그룹</title>
+    <link rel="shortcut icon" href="../images/layout/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <script src="../js/minified/gsap.min.js"></script>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red">red</div>
+    <div class="box green">green</div>
+    <div class="box blue">blue</div>
+    <script>
+      //   gsap.to(".box", { "font-size": 200 }); // 개행문자ㅏㄱ 들어ㅗ가는 속성은 ""을 쓸것
+      gsap.to(".red", { x: 1200, backgroundColor: "#000", color: "#fff", duration: 3, delay: 1, stagger: 0.2 });
+      gsap.to(".green", { x: 1200, backgroundColor: "#000", color: "#fff", duration: 3, delay: 1 });
+      gsap.to(".blue", { x: 1200, backgroundColor: "#000", color: "#fff", duration: 3, delay: 1 });
+      //   gsap.to(".green", { y: 1200 }); // == transform = traslateX, translateY
+    </script>
+  </body>
+</html>

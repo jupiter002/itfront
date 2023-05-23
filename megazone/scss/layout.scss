@@ -6,7 +6,9 @@
   justify-content: space-between; // 양쪽으로 펼쳐짐
   width: 100%;
   height: 100px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   z-index: 99;
+  transition: all 0.5s ease;
 
   .logo a {
     height: 80px;
@@ -14,16 +16,16 @@
     // 부모가 사이즈를 바꾼다고 이미지의 크기가 바뀌지는 않음
     img {
       position: absolute;
-      width: 150px; // 부모한테 너비를 맞추고 싶을때는 width 100%줄것
+      width: 150px; // 부모한테 너비를 맞추고 싶을때는 width 100% 줄것
       height: 50px;
-      display: flex;
-      align-items: center;
       opacity: 0;
+      transition: all 0.5s ease;
       &.white {
         opacity: 1;
       }
     }
   }
+
   &.on {
     color: #111;
     background-color: #fff;
@@ -38,24 +40,23 @@
       }
     }
   }
-}
 
-.gnb {
-  .list {
-    display: flex;
-    justify-content: end;
-    color: #fff;
-    font-size: 18px;
-
-    li a {
+  .gnb {
+    .list {
       display: flex;
-      align-items: center;
-      border: 1px solid #fff;
-      padding: 0 40px;
-      height: 80px;
-      font-size: $h3;
-      font-weight: 500;
-      box-sizing: border-box; //height에 padding이나 border를 다 포함시키는 속성
+      justify-content: end;
+      color: #f0f;
+      font-size: 18px;
+
+      li a {
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        height: 80px;
+        font-size: $h3;
+        font-weight: 500;
+        box-sizing: border-box; //height에 padding이나 border를 다 포함시키는 속성
+      }
     }
   }
 }

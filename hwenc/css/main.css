@@ -65,7 +65,7 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
-  background-color: #f60;
+  background-color: #0b7bff;
 }
 .main-visual .mask .btns .pagination {
   width: auto;
@@ -224,8 +224,8 @@
   border-right: none;
 }
 .master-piece .case .menu li:hover {
-  background-color: #f60;
-  border-right-color: #f60;
+  background-color: #0b7bff;
+  border-right-color: #0b7bff;
 }
 .master-piece .case .menu li:hover span {
   left: 30px;
@@ -369,7 +369,7 @@
   flex-grow: 1;
 }
 .social .pagination .swiper-pagination-progressbar-fill {
-  background-color: #f60;
+  background-color: #0b7bff;
 }
 
 .banner {

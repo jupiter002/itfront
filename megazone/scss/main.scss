@@ -17,6 +17,15 @@
       align-items: center;
       color: #fff;
       height: 100vh;
+      // .content {
+      //   position: absolute;
+      //   color: #fff;
+      //    top: 50%;
+      //transform: translateY()
+      //   height: 100vh;
+      .word {
+        overflow: hidden;
+      }
       h2 {
         font-weight: 900;
         line-height: 80px;
@@ -24,6 +33,104 @@
       }
     }
   }
-  .product {
+}
+.service {
+  padding: 150px 0;
+  overflow-x: hidden;
+  .mask {
+    position: relative;
+    margin-top: 120px;
+    .list {
+      li {
+        width: 1160px;
+        p {
+          margin-top: 30px;
+          font-size: $h3;
+          .category {
+            padding: 10px 20px;
+            background-color: #111;
+            color: #fff;
+          }
+        }
+      }
+    }
+    button {
+      position: absolute;
+      background: none;
+      top: 50%;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      width: 60px;
+      height: 60px;
+      z-index: 2;
+      cursor: pointer;
+      .material-icons {
+        font-size: 48px;
+        color: #fff;
+      }
+      &.btn-next {
+        right: 270px;
+      }
+    }
+    .pagination {
+      margin-top: 50px;
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        border: 3px solid $main-color;
+        background: none;
+        border-radius: 100px;
+        transition: all 0.25s ease;
+        &-active {
+          width: 50px;
+          background-color: $main-color;
+        }
+      }
+    }
   }
 }
+.partner {
+  padding: 150px 0;
+  background-color: $bg-color;
+  overflow-x: hidden;
+  .brand {
+    margin-top: 50px;
+    ul {
+      // display: flex;
+      // animation: brand-motion 20s linear infinite;
+      transition-timing-function: linear;
+      li {
+        width: auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+.title-box {
+  h1 {
+    font-size: $h1;
+    line-height: 1.25;
+    .mini {
+      color: $main-color;
+      display: block;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    font-size: $h3;
+  }
+}
+// @keyframes brand-motion {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
