@@ -247,6 +247,28 @@
     overflow: hidden;
   }
 }
+.page-list {
+  display: flex;
+  .page-nav1 {
+    ul {
+      > li {
+        a {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        ul {
+          li {
+            a {
+              font-size: 18px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .title-box {
   display: flex;
   align-items: end;
