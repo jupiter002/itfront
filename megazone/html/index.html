@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="../css/font.css" />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/splitting.css" />
+    <link rel="stylesheet" href="../css/aos.css" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/main.css" />
 
+    <script src="../js/aos.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/minified/gsap.min.js"></script>
     <script src="../js/splitting.min.js"></script>
@@ -35,6 +37,8 @@
       </h1>
       <nav class="gnb">
         <ul class="list">
+          <!-- li들을 가로 정렬하려면 ul에 display:flex를 해야함. 4개의 li를 하나의 ul이 가지고 있기 때문 -->
+
           <li><a href="">기술과 서비스</a></li>
           <li><a href="">인사이트</a></li>
           <li><a href="">메가존.디지털</a></li>
@@ -62,68 +66,69 @@
       </div>
       <!-- main-visual end -->
       <div class="service">
-        <div class="title-box">
-          <h1>
-            언제나 사람이 중심이 되는<br />
-            차세대 디지털 서비스를 고민합니다.
-          </h1>
-          <p>
-            우리 모두의 삶을 변화 시키는 주변의 모든 디지털 서비스에 대해<br />
-            메가존.디지털은 기업의 비즈니스 혁신과 성장을 위해 오늘도 진심으로 고민합니다.
-          </p>
-        </div>
-        <div class="mask">
-          <ul class="swiper-wrapper list">
-            <li class="swiper-slide">
-              <a href=""
-                ><img src="../images/main/image1.png" alt="" />
-                <p>
-                  <span class="category">레퍼런스</span>
-                  혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
-                </p></a
-              >
-            </li>
-            <li class="swiper-slide">
-              <a href=""
-                ><img src="../images/main/image2.png" alt="" />
-                <p>
-                  <span class="category">레퍼런스</span>
-                  혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
-                </p></a
-              >
-            </li>
-            <li class="swiper-slide">
-              <a href=""
-                ><img src="../images/main/image3.png" alt="" />
-                <p>
-                  <span class="category">레퍼런스</span>
-                  혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
-                </p></a
-              >
-            </li>
-            <li class="swiper-slide">
-              <a href=""
-                ><img src="../images/main/image4.png" alt="" />
-                <p>
-                  <span class="category">레퍼런스</span>
-                  혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
-                </p></a
-              >
-            </li>
-
-            <li class="swiper-slide">
-              <a href=""
-                ><img src="../images/main/image5.png" alt="" />
-                <p>
-                  <span class="category">레퍼런스</span>
-                  혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
-                </p></a
-              >
-            </li>
-          </ul>
-          <button class="btn-prev"><span class="material-icons">chevron_left</span></button>
-          <button class="btn-next"><span class="material-icons">chevron_right</span></button>
-          <div class="pagination"></div>
+        <div class="container">
+          <div class="title-box">
+            <h2>
+              언제나 사람이 중심이 되는<br />
+              차세대 디지털 서비스를 고민합니다.
+            </h2>
+            <p>
+              우리 모두의 삶을 변화 시키는 주변의 모든 디지털 서비스에 대해<br />
+              메가존.디지털은 기업의 비즈니스 혁신과 성장을 위해 오늘도 진심으로 고민합니다.
+            </p>
+          </div>
+          <div class="mask">
+            <ul class="swiper-wrapper list">
+              <li class="swiper-slide">
+                <a href=""
+                  ><img src="../images/main/image1.png" alt="" />
+                  <p>
+                    <span class="category">레퍼런스</span>
+                    혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
+                  </p></a
+                >
+              </li>
+              <li class="swiper-slide">
+                <a href=""
+                  ><img src="../images/main/image2.png" alt="" />
+                  <p>
+                    <span class="category">레퍼런스</span>
+                    혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
+                  </p></a
+                >
+              </li>
+              <li class="swiper-slide">
+                <a href=""
+                  ><img src="../images/main/image3.png" alt="" />
+                  <p>
+                    <span class="category">레퍼런스</span>
+                    혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
+                  </p></a
+                >
+              </li>
+              <li class="swiper-slide">
+                <a href=""
+                  ><img src="../images/main/image4.png" alt="" />
+                  <p>
+                    <span class="category">레퍼런스</span>
+                    혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
+                  </p></a
+                >
+              </li>
+              <li class="swiper-slide">
+                <a href=""
+                  ><img src="../images/main/image5.png" alt="" />
+                  <p>
+                    <span class="category">레퍼런스</span>
+                    혜택이 넘치는 내 차 관리 서비스 ‘머핀’ 구축 사례
+                  </p></a
+                >
+              </li>
+            </ul>
+            <button class="btn-prev"><span class="material-icons">chevron_left</span></button>
+            <button class="btn-next"><span class="material-icons">chevron_right</span></button>
+            <div class="pagination"></div>
+          </div>
         </div>
       </div>
       <!-- service end -->
@@ -155,6 +160,171 @@
             <li class="swiper-slide"><img src="../images/main/Unity.png" alt="" /></li>
           </ul>
         </div>
+      </div>
+      <!-- partner end -->
+      <div class="effect">
+        <div class="container">
+          <div class="title-box">
+            <div>
+              <h2>
+                <span class="mini">전환주도</span>
+                메가존.디지털은<br />
+                클라우드, 데이터, 디지털 분야의 네이티브로서<br />
+                비즈니스 디지털 전환을 주도합니다.
+              </h2>
+            </div>
+          </div>
+          <div class="panel">
+            <ul>
+              <li data-aos="fade-right" data-aos-delay="500">
+                <a href="">
+                  <div class="img-box"><img src="../images/main/tech1.png" alt="" /></div>
+                  <p>데이터 이노베이션</p>
+                </a>
+              </li>
+              <li data-aos="fade-down" data-aos-delay="500">
+                <a href="">
+                  <div class="img-box"><img src="../images/main/tech2.png" alt="" /></div>
+                  <p>클라우드 네이티브</p>
+                </a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="500">
+                <a href="">
+                  <div class="img-box"><img src="../images/main/tech3.png" alt="" /></div>
+                  <p>디지털 플랫폼&이커머스</p>
+                </a>
+              </li>
+              <li data-aos="fade-left" data-aos-delay="500">
+                <a href="">
+                  <div class="img-box"><img src="../images/main/tech4.png" alt="" /></div>
+                  <p>인텔리전스 프로덕트</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <iframe
+          src="https://player.vimeo.com/video/782821565?h=370b6b74e6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479%22&amp;autoplay=1&amp;loop=1&amp;title=0&amp;background=1"
+          frameborder="0"
+          allow="autoplay"
+          webkitallowfullscreen=""
+          mozallowfullscreen=""
+          allowfullscreen=""
+          class="bg"
+        ></iframe>
+      </div>
+      <!-- effect end -->
+      <div class="news">
+        <div class="container">
+          <div class="title-box">
+            <h2>
+              <span class="mini">뉴스</span>
+              메가존.디지털의 새로운 소식 입니다.
+            </h2>
+            <a href="" class="detail">자세히보기<span class="material-icons"> east </span></a>
+          </div>
+          <div class="panel">
+            <ul data-aos="fade-up" data-aos-delay="200" data-aos-offset="500">
+              <li>
+                <div class="img-box"><img src="../images/main/news2.png" alt="" /></div>
+                <div class="txt-box">
+                  <h3>롯데홈쇼핑, 메타버스 플랫폼 만든다 13개 ICT 기업과 '원팀'</h3>
+                  <p>
+                    롯데홈쇼핑이 지난 12일 서울 영등포구 양평동 본사에서 국내 13개 ICT 전문 기업 및 전문가와 '메타버스 원팀'을 출범하고 메타버스
+                    플랫폼 구축을 위한 업무 협약을 체결했다고 13일 밝혔다. 메타버스 원팀은 메타버스 플랫폼 구축을 위한 중장기 전략을 마련하고
+                    첨단기술을 마련하고 제주 삼다수 백산수 아이시스 푸르지오 농심 신라면
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-box"><img src="../images/main/news4.png" alt="" /></div>
+                <div class="txt-box">
+                  <h3>LGU+미디어플랫폼 MSA전환 개발 및 DevOps도입 프로젝트’ 타운홀미팅</h3>
+                  <p>
+                    2022년 5월 10일 화요일, LGU+ 미디어플랫폼 MSA전환 개발 및 DevOps 도입 프로젝트 타운홀미팅이 메가존빌딩 지하 대강연장에서
+                    진행되었습니다. 첫 번째 순서는 오민석 전무님이 지난 1년동안 수고한 모든 프로젝트 수행 TF ㅁㅁㅁㅁㅁ
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-box"><img src="../images/main/news5.png" alt="" /></div>
+                <div class="txt-box">
+                  <h3>서울대학교 AI연구원 가을 Retreat 참관 후기</h3>
+                  <p>
+                    지난 2022년 11월 4일 서울대학교 교수회관에서 서울대학교 AI연구원 Retreat 행사가 진행되었습니다. 오전 세션에 기업소개는 EPMO 박종하
+                    상무님께서 발표해주셨고, 오후 Oral 세션에서는 손영제 이사님께서 발표주셨습니다. 기업 홍보와 채용의 목적을 두고...
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- news end -->
+      <div class="recruit">
+        <div class="container">
+          <div class="txt-box">
+            메가존.디지털
+            <div class="rolling">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">모바일 기획자</li>
+                <li class="swiper-slide">UI 개발자</li>
+                <li class="swiper-slide">UX 디자이너</li>
+                <li class="swiper-slide">서버 개발자</li>
+                <li class="swiper-slide">서비스 기획자</li>
+              </ul>
+            </div>
+            는<br />
+            놀라운 여정을 함께 할 동료를 기다립니다.
+          </div>
+          <a href="" class="more">더 알아보기</a>
+        </div>
+      </div>
+
+      <div class="page-list">
+        <div class="page-nav1">
+          <ul>
+            <li>
+              <a href="">기술과 서비스</a>
+              <ul>
+                <li><a href="">기술역량</a></li>
+                <li><a href="">전략컨설팅</a></li>
+                <li><a href="">전환주도</a></li>
+                <li><a href="">글로벌 기술 파트너</a></li>
+              </ul>
+              <ul>
+                <li><a href="">인사이트</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="page-nav2">
+          <ul>
+            <li>
+              <a href="">메가존.디지털</a>
+              <ul>
+                <li><a href="">뉴스</a></li>
+                <li><a href="">어워즈</a></li>
+                <li><a href="">고객사 소개</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">인재영입</a>
+              <ul>
+                <li><a href="">우리의 문화</a></li>
+              </ul>
+            </li>
+            <li><a href="">오시는 길</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="title-box">
+        <h2>
+          지금, 메가존.디지털에 문의하세요.
+          <span class="normal"> 프로젝트, 파트너십, 입사지원, 기타 문의가 있으시면, 지금 바로 메가존.디지털에 연락하세요. </span>
+        </h2>
+        <a href="">문의하기</a>
       </div>
     </main>
 

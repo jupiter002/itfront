@@ -40,6 +40,9 @@
 .service {
   padding: 150px 0;
   overflow-x: hidden;
+  .title-box {
+    display: block;
+  }
   .mask {
     position: relative;
     margin-top: 120px;
@@ -93,6 +96,7 @@
     }
   }
 }
+
 .partner {
   padding: 150px 0;
   background-color: $bg-color;
@@ -113,7 +117,161 @@
     }
   }
 }
+
+.effect {
+  padding: 150px 0;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+
+  .panel {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 24%;
+        a:hover {
+          img {
+            transform: scale(1.25);
+          }
+        }
+      }
+      .img-box {
+        overflow: hidden;
+      }
+      img {
+        vertical-align: top;
+        width: 100%;
+        transition: all 0.6s ease;
+        aspect-ratio: 1 / 1.5;
+      }
+    }
+  }
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    aspect-ratio: 1/0.5625; //ctrl + shift + p emmet evalute Math
+    z-index: -1;
+  }
+}
+
+.news {
+  // width: 100%;
+  padding: 150px 0px;
+  font-size: $h4;
+
+  .panel {
+    margin-top: 50px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 20px; // margin 과 gap의 차이는 좌우 인접요소가 있을때 gap이 생긴다
+      // margin은 인접요소 상관 없이 전부 여백을 만든다
+
+      li {
+        width: 33.33%;
+        .img-box {
+          img {
+            width: 100%;
+          }
+        }
+
+        .txt-box {
+          h3 {
+            margin: 20px 0 30px;
+            font-size: $h3;
+            @include ellipsis();
+          }
+          p {
+            @include multiEllipsis();
+          }
+        }
+      }
+    }
+  }
+
+  .title-box {
+    display: flex;
+    align-items: end;
+    .detail {
+      margin-left: 50px;
+      font-size: $h4;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+.recruit {
+  color: #fff;
+  padding: 150px 0;
+  background-image: url(../images/main/background.png);
+  .txt-box {
+    font-size: $h1 * 1.5;
+    font-weight: 900;
+    line-height: 1.5;
+    .rolling {
+      position: relative;
+      width: 500px;
+      height: 120px;
+      display: inline-block;
+      overflow: hidden;
+      text-align: center;
+      color: $main-color;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-color: #fff;
+      }
+    }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    background-color: $main-color;
+    font-weight: 600;
+    font-size: $h3;
+    @include longShadow(5, darken($main-color, 15));
+    overflow: hidden;
+  }
+}
+.page-list {
+  display: flex;
+  .page-nav1 {
+    ul {
+      > li {
+        a {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        ul {
+          li {
+            a {
+              font-size: 18px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .title-box {
+  display: flex;
+  align-items: end;
   h2 {
     font-size: $h1;
     line-height: 1.25;
@@ -129,7 +287,14 @@
   p {
     font-size: $h3;
   }
+  .detail {
+    .material-icons {
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
 }
+
 // @keyframes brand-motion {
 //   0% {
 //     transform: translateX(0);
