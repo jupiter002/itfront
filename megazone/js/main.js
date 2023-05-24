@@ -34,6 +34,7 @@ new Swiper(".service .mask", {
     clickable: true,
   },
 });
+
 new Swiper(".partner .brand", {
   slidesPerView: "auto",
   speed: 1000,

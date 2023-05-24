@@ -1,30 +1,13 @@
 @import "vars";
 
 .header {
-  position: fixed; // fixed랑absolute쓸때는 너비지정을 해줄것
+  position: fixed;
   display: flex;
-  justify-content: space-between; // 양쪽으로 펼쳐짐
+  justify-content: space-between;
   width: 100%;
   height: 100px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
   z-index: 99;
-  transition: all 0.5s ease;
-
-  .logo a {
-    height: 80px;
-    padding: 0 50px;
-    // 부모가 사이즈를 바꾼다고 이미지의 크기가 바뀌지는 않음
-    img {
-      position: absolute;
-      width: 150px; // 부모한테 너비를 맞추고 싶을때는 width 100% 줄것
-      height: 50px;
-      opacity: 0;
-      transition: all 0.5s ease;
-      &.white {
-        opacity: 1;
-      }
-    }
-  }
 
   &.on {
     color: #111;
@@ -40,22 +23,31 @@
       }
     }
   }
-
+  .logo a {
+    img {
+      position: absolute;
+      width: 150px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 30px 30px;
+      opacity: 0;
+      &.white {
+        opacity: 1;
+      }
+    }
+  }
   .gnb {
     .list {
       display: flex;
       justify-content: end;
-      color: #f0f;
       font-size: 18px;
+      padding: 50px;
 
-      li a {
-        display: flex;
-        align-items: center;
-        padding: 0 40px;
-        height: 80px;
-        font-size: $h3;
-        font-weight: 500;
-        box-sizing: border-box; //height에 padding이나 border를 다 포함시키는 속성
+      li {
+        a {
+          padding: 10px;
+        }
       }
     }
   }
