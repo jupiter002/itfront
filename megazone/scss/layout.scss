@@ -8,6 +8,7 @@
   height: 100px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   z-index: 99;
+  color: #fff;
   transition: all 0.5s ease;
 
   .logo a {
@@ -45,7 +46,6 @@
     .list {
       display: flex;
       justify-content: end;
-      color: #f0f;
       font-size: 18px;
 
       li a {
