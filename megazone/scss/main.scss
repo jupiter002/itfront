@@ -113,6 +113,48 @@
     }
   }
 }
+
+.effect {
+  padding: 150px 0;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+
+  .panel {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 24%;
+        a:hover {
+          img {
+            transform: scale(1.25);
+          }
+        }
+      }
+      .img-box {
+        overflow: hidden;
+      }
+      img {
+        vertical-align: top;
+        width: 100%;
+        transition: all 0.6s ease;
+        aspect-ratio: 1 / 1.5;
+      }
+    }
+  }
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    aspect-ratio: 1/0.5625; //ctrl + shift + p emmet evalute Math
+    z-index: -1;
+  }
+}
+
 .title-box {
   h2 {
     font-size: $h1;
@@ -130,6 +172,7 @@
     font-size: $h3;
   }
 }
+
 // @keyframes brand-motion {
 //   0% {
 //     transform: translateX(0);

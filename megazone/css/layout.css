@@ -4,7 +4,6 @@
   justify-content: space-between;
   width: 100%;
   height: 100px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   z-index: 99;
   color: #fff;
   transition: all 0.5s ease;
@@ -26,6 +25,7 @@
 .header.on {
   color: #111;
   background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 .header.on .logo img.white {
   opacity: 0;

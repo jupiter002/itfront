@@ -6,7 +6,7 @@
   justify-content: space-between; // 양쪽으로 펼쳐짐
   width: 100%;
   height: 100px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+
   z-index: 99;
   color: #fff;
   transition: all 0.5s ease;
@@ -30,6 +30,7 @@
   &.on {
     color: #111;
     background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     .logo {
       img {
         &.white {

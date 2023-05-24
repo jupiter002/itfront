@@ -1,7 +1,9 @@
 Splitting();
+AOS.init();
 
 const header = document.querySelector(".header");
-header.classList.add("on"); // html과 js가 잘 연결되어 있는지 확인하려면
+//header.classList.add("on");
+// html과 js가 잘 연결되어 있는지 확인하려면
 //브라우저에서 개발자도구의 network을 볼것
 console.log(header);
 //사용자가 scroll을 해서 스크롤의 높이가 0보다 커지면 on을 켠다
@@ -9,6 +11,7 @@ console.log(header);
 window.addEventListener("scroll", () => {
   // event매개변수
   const Y = window.scrollY;
+
   console.log(Y);
 
   if (Y > 0) {

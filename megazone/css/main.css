@@ -94,6 +94,42 @@
   align-items: center;
 }
 
+.effect {
+  padding: 150px 0;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+}
+.effect .panel ul {
+  display: flex;
+  justify-content: space-between;
+}
+.effect .panel ul li {
+  width: 24%;
+}
+.effect .panel ul li a:hover img {
+  transform: scale(1.25);
+}
+.effect .panel ul .img-box {
+  overflow: hidden;
+}
+.effect .panel ul img {
+  vertical-align: top;
+  width: 100%;
+  transition: all 0.6s ease;
+  aspect-ratio: 1/1.5;
+}
+.effect .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  aspect-ratio: 1/0.5625;
+  z-index: -1;
+}
+
 .title-box h2 {
   font-size: 48px;
   line-height: 1.25;
