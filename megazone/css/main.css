@@ -222,15 +222,40 @@
 }
 
 .page-list {
+  color: #fff;
+  background-color: #111;
+  position: absolute;
+  width: 100%;
+  padding: 70px 0;
+}
+.page-list .container {
   display: flex;
+  justify-content: space-between;
 }
-.page-list .page-nav1 ul > li a {
-  font-size: 30px;
-  font-weight: 700;
+.page-list .container .footer-nav {
+  padding: 0 20px;
 }
-.page-list .page-nav1 ul > li ul li a {
-  font-size: 18px;
-  font-weight: 400;
+.page-list .container .footer-nav li {
+  padding: 10px;
+}
+.page-list .container .footer-nav > li {
+  padding: 20px 0;
+}
+.page-list .container .footer-nav > li > a {
+  font-size: 24px;
+}
+.page-list .container .title-box {
+  display: block;
+  width: 50%;
+  color: #fff;
+  background-color: #222;
+  text-align: center;
+}
+.page-list .container .title-box h2 {
+  font-size: 35px;
+}
+.page-list .container .title-box h2 .normal {
+  font-size: 20px;
 }
 
 .title-box {

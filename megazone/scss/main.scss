@@ -248,21 +248,38 @@
   }
 }
 .page-list {
-  display: flex;
-  .page-nav1 {
-    ul {
+  color: #fff;
+  background-color: #111;
+  position: absolute;
+  width: 100%;
+  padding: 70px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .footer-nav {
+      padding: 0 20px;
+
+      li {
+        padding: 10px;
+      }
       > li {
-        a {
-          font-size: 30px;
-          font-weight: 700;
+        padding: 20px 0;
+
+        > a {
+          font-size: $h3;
         }
-        ul {
-          li {
-            a {
-              font-size: 18px;
-              font-weight: 400;
-            }
-          }
+      }
+    }
+    .title-box {
+      display: block;
+      width: 50%;
+      color: #fff;
+      background-color: #222;
+      text-align: center;
+      h2 {
+        font-size: 35px;
+        .normal {
+          font-size: 20px;
         }
       }
     }
