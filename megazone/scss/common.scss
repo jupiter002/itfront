@@ -1,8 +1,8 @@
 @charset "UTF-8";
 body {
-  font-size: 30px;
+  font-size: 18px;
   color: rgb(0, 0, 0);
-  font-family: "Noto Sans", "TTTtangsbudaejjigaeB";
+  font-family: "Raleway", "Noto Sans KR", "Sylfaen 보통";
   font-weight: 400;
   min-height: 2000px;
   /* 몇 몇 태그들은 부모의 속성을 물려받지 않는 것들도 있다. */
@@ -12,7 +12,6 @@ a {
   /*부모의 속성을 상속받지 않는 태그들을 상속하려면 inherits 을 쓴다*/
   text-decoration: none;
   color: inherit;
-  font-family: Times, serif;
 }
 
 .container {

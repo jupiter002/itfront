@@ -48,3 +48,15 @@ new Swiper(".partner .brand", {
     disableOnInteraction: false,
   },
 });
+
+new Swiper(".recruit .txt-box .rolling", {
+  direction: "vertical",
+  effect: "slide",
+  slidesPerView: 1,
+  loop: true,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 2000,
+    reverseDirection: false,
+  },
+}); //Swiper생성자안에는 swiper-wrapper의 부모클래스를 넣는다.

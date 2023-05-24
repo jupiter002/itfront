@@ -24,6 +24,9 @@
   padding: 150px 0;
   overflow-x: hidden;
 }
+.service .title-box {
+  display: block;
+}
 .service .mask {
   position: relative;
   margin-top: 120px;
@@ -130,6 +133,98 @@
   z-index: -1;
 }
 
+.news {
+  padding: 150px 0px;
+  font-size: 20px;
+}
+.news .panel {
+  margin-top: 50px;
+}
+.news .panel ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 20px;
+}
+.news .panel ul li {
+  width: 33.33%;
+}
+.news .panel ul li .img-box img {
+  width: 100%;
+}
+.news .panel ul li .txt-box h3 {
+  margin: 20px 0 30px;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news .panel ul li .txt-box p {
+  line-height: 1.5;
+  height: 4.5em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.news .title-box {
+  display: flex;
+  align-items: end;
+}
+.news .title-box .detail {
+  margin-left: 50px;
+  font-size: 20px;
+}
+.news .title-box h2 {
+  margin-bottom: 0;
+}
+
+.recruit {
+  color: #fff;
+  padding: 150px 0;
+  background-image: url(../images/main/background.png);
+}
+.recruit .txt-box {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.recruit .txt-box .rolling {
+  position: relative;
+  width: 500px;
+  height: 120px;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  color: #0b7bff;
+}
+.recruit .txt-box .rolling::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #fff;
+}
+.recruit a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  background-color: #0b7bff;
+  font-weight: 600;
+  font-size: 24px;
+  text-shadow: 0px 0px 0px #0057be,1px 1px 0px #0057be,2px 2px 0px #0057be,3px 3px 0px #0057be,4px 4px 0px #0057be,5px 5px 0px #0057be;
+  overflow: hidden;
+}
+
+.title-box {
+  display: flex;
+  align-items: end;
+}
 .title-box h2 {
   font-size: 48px;
   line-height: 1.25;
@@ -143,4 +238,8 @@
 }
 .title-box p {
   font-size: 24px;
+}
+.title-box .detail .material-icons {
+  vertical-align: middle;
+  margin-left: 10px;
 }
