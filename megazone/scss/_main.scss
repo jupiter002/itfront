@@ -1,0 +1,323 @@
+@import "vars";
+@import "mixins";
+.main {
+  &-visual {
+    iframe {
+      position: absolute;
+      width: 100%;
+      aspect-ratio: 1 / 0.5625;
+      //height: 100vh;
+      // object-fit: cover; // img, video파일에만 사용가능
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      height: 100vh;
+      //  .content {
+      //  position: absolute;
+      //  color: #fff;
+      //  top: 50%;
+      //  transform: translateY(-50%);
+      //  text-align: center;
+      //  width: 100%;
+
+      //  height: 100vh;
+      .word {
+        overflow: hidden;
+      }
+      h2 {
+        font-weight: 900;
+        line-height: 80px;
+        font-size: 50px;
+      }
+    }
+  }
+}
+.service {
+  padding: 150px 0;
+  overflow-x: hidden;
+  .title-box {
+    display: block;
+  }
+  .mask {
+    position: relative;
+    margin-top: 120px;
+    .list {
+      li {
+        width: 1160px;
+        p {
+          margin-top: 30px;
+          font-size: $h3;
+          .category {
+            padding: 10px 20px;
+            background-color: #111;
+            color: #fff;
+          }
+        }
+      }
+    }
+    button {
+      position: absolute;
+      background: none;
+      top: 50%;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      width: 60px;
+      height: 60px;
+      z-index: 2;
+      cursor: pointer;
+      .material-icons {
+        font-size: 48px;
+        color: #fff;
+      }
+      &.btn-next {
+        right: 270px;
+      }
+    }
+    .pagination {
+      margin-top: 50px;
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        border: 3px solid $main-color;
+        background: none;
+        border-radius: 100px;
+        transition: all 0.25s ease;
+        &-active {
+          width: 50px;
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+.partner {
+  padding: 150px 0;
+  background-color: $bg-color;
+  overflow-x: hidden;
+  .brand {
+    margin-top: 50px;
+    ul {
+      // display: flex;
+      // animation: brand-motion 20s linear infinite;
+      transition-timing-function: linear;
+      li {
+        width: auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.effect {
+  padding: 150px 0;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+
+  .panel {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 24%;
+        a:hover {
+          img {
+            transform: scale(1.25);
+          }
+        }
+      }
+      .img-box {
+        overflow: hidden;
+      }
+      img {
+        vertical-align: top;
+        width: 100%;
+        transition: all 0.6s ease;
+        aspect-ratio: 1 / 1.5;
+      }
+    }
+  }
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    aspect-ratio: 1/0.5625; //ctrl + shift + p emmet evalute Math
+    z-index: -1;
+  }
+}
+
+.news {
+  // width: 100%;
+  padding: 150px 0px;
+  font-size: $h4;
+
+  .panel {
+    margin-top: 50px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 20px; // margin 과 gap의 차이는 좌우 인접요소가 있을때 gap이 생긴다
+      // margin은 인접요소 상관 없이 전부 여백을 만든다
+
+      li {
+        width: 33.33%;
+        .img-box {
+          img {
+            width: 100%;
+          }
+        }
+
+        .txt-box {
+          h3 {
+            margin: 20px 0 30px;
+            font-size: $h3;
+            @include ellipsis();
+          }
+          p {
+            @include multiEllipsis();
+          }
+        }
+      }
+    }
+  }
+
+  .title-box {
+    display: flex;
+    align-items: end;
+    .detail {
+      margin-left: 50px;
+      font-size: $h4;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+.recruit {
+  color: #fff;
+  padding: 150px 0;
+  background-image: url(../images/main/background.png);
+  .txt-box {
+    font-size: $h1 * 1.5;
+    font-weight: 900;
+    line-height: 1.5;
+    .rolling {
+      position: relative;
+      width: 500px;
+      height: 120px;
+      display: inline-block;
+      overflow: hidden;
+      text-align: center;
+      color: $main-color;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-color: #fff;
+      }
+    }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    background-color: $main-color;
+    font-weight: 600;
+    font-size: $h3;
+    @include longShadow(5, darken($main-color, 15));
+    overflow: hidden;
+  }
+}
+.page-list {
+  color: #fff;
+  background-color: #111;
+  position: absolute;
+  width: 100%;
+  padding: 70px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .footer-nav {
+      padding: 0 20px;
+
+      > li {
+        padding: 20px 0;
+        ul {
+          li {
+            padding: 10px 0;
+          }
+        }
+        > a {
+          font-size: $h3;
+        }
+      }
+    }
+    .title-box {
+      display: block;
+      width: 50%;
+      color: #fff;
+      background-color: #222;
+      text-align: center;
+      h2 {
+        font-size: 35px;
+        .normal {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.title-box {
+  display: flex;
+  align-items: end;
+  h2 {
+    font-size: $h1;
+    line-height: 1.25;
+    margin-bottom: 60px;
+    .mini {
+      color: $main-color;
+      display: block;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    font-size: $h3;
+  }
+  .detail {
+    .material-icons {
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+}
+
+// @keyframes brand-motion {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }

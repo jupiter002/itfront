@@ -234,18 +234,19 @@
       }
     }
   }
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 60px;
-    background-color: $main-color;
-    font-weight: 600;
-    font-size: $h3;
-    @include longShadow(5, darken($main-color, 15));
-    overflow: hidden;
-  }
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  background-color: $main-color;
+  font-weight: 600;
+  font-size: $h3;
+  @include longShadow(5, darken($main-color, 15));
+  overflow: hidden;
 }
 .page-list {
   color: #fff;
