@@ -1,0 +1,12 @@
+@import "vars";
+@import "mixins";
+main {
+  .main {
+    &-visual {
+      position: absolute;
+      width: 100%;
+      aspect-ratio: 1/0.5625;
+      object-fit: cover;
+    }
+  }
+}
