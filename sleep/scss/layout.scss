@@ -72,6 +72,7 @@
         padding: 0 60px;
         position: relative;
         &:after {
+          // depth01아래 마우스 올라가면 나타나는 흰색 선
           content: "";
           display: block;
           position: absolute;
