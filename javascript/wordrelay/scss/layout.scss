@@ -1,0 +1,53 @@
+body {
+  font-family: "Noto Sans KR";
+  background-color: #421;
+}
+.header {
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.input-box {
+  position: absolute;
+  bottom: 200px;
+  background-color: #fff;
+  padding: 20px 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100px;
+}
+.word {
+  width: 600px;
+  height: 40px;
+  font-family: "Noto Sans KR";
+  border: none;
+  border: 1px solid #421;
+  font-size: 20px;
+  font-weight: 500;
+}
+.word-list {
+  margin-top: 100px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 1200px;
+    // transform: translateX(-50%);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    li {
+      padding: 20px 30px;
+      background-color: #d66f6f;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      font-weight: 600;
+    }
+  }
+}

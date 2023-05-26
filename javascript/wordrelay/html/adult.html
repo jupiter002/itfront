@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for=""><span>AGE</span><input type="text" class="user-age" /></label>
+      <button class="btn-adult" type="submit">성인인증</button>
+    </form>
+  </body>
+  <script>
+    const btnadult = document.querySelector(".btn-adult");
+    const adult = document.querySelector(".user-age");
+
+    btnadult.addEventListener("click", (e) => {
+      const age = parseInt(adult.value);
+      if (age > 19) {
+        e.preventDefault();
+        alert("성인입니다");
+        location.href = "http://www.google.com";
+      }
+    });
+  </script>
+</html>
