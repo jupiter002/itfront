@@ -90,7 +90,8 @@
         position: absolute;
         padding: 0 40px;
         li {
-          a {
+          .inner-list {
+            width: 30px;
             display: flex;
             padding: 20px;
           }
