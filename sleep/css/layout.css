@@ -83,8 +83,8 @@
   position: absolute;
   padding: 0 40px;
 }
-.header .gnb .list .depth02 li .inner-list {
-  width: 30px;
+.header .gnb .list .depth02 li {
+  width: 150px;
   display: flex;
   padding: 20px;
 }

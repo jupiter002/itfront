@@ -90,11 +90,9 @@
         position: absolute;
         padding: 0 40px;
         li {
-          .inner-list {
-            width: 30px;
-            display: flex;
-            padding: 20px;
-          }
+          width: 150px;
+          display: flex;
+          padding: 20px;
         }
       }
     }
