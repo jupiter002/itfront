@@ -1,1 +1,1 @@
-main .main-visual img{position:absolute;left:0;top:0;width:100%;aspect-ratio:1/.5625;-o-object-fit:cover;object-fit:cover;z-index:-1}
+main-visual img{position:absolute;left:0;top:0;width:100%;aspect-ratio:1/.5625;-o-object-fit:cover;object-fit:cover;z-index:-1}main .txt{position:absolute;display:block;left:250px;top:50%}main .txt .search{display:flex;align-items:center;margin:10px 0}main .txt input{padding:20px 100px;background-color:rgba(0,0,0,0);border:5px solid #fff}main .txt button{background-color:#3481f5;border:1px solid #3481f5;padding:32px;border-radius:0 0 10px 0}

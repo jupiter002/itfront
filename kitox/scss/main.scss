@@ -1,7 +1,7 @@
 @import "vars";
 @import "mixins";
 main {
-  .main-visual {
+  &-visual {
     img {
       position: absolute;
       left: 0;
@@ -10,6 +10,28 @@ main {
       aspect-ratio: 1/0.5625;
       object-fit: cover;
       z-index: -1;
+    }
+  }
+  .txt {
+    position: absolute;
+    display: block;
+    left: 250px;
+    top: 50%;
+    .search {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+    input {
+      padding: 20px 100px;
+      background-color: transparent;
+      border: 5px solid #fff;
+    }
+    button {
+      background-color: #3481f5;
+      border: 1px solid #3481f5;
+      padding: 32px;
+      border-radius: 0 0 10px 0;
     }
   }
 }
