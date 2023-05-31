@@ -41,7 +41,7 @@
   justify-content: space-between;
 }
 .wrap .header-layout .header-main nav {
-  transform: translateX(-90%);
+  transform: translateX(-60%);
 }
 .wrap .header-layout .header-main nav ul {
   display: flex;

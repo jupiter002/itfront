@@ -19,9 +19,9 @@
     <script src="../js/lightpick.js"></script>
     <script src="../js/fancybox.umd.js"></script>
     <script src="../js/raw.githubusercontent.com_lodash_lodash_4.17.15-npm_lodash.min.js"></script>
-    <script src=""></script>
+    <script src="../js/cdn.jsdelivr.net_npm_chart.js"></script>
     <script src="../js/minified/gsap.min.js" defer></script>
-    <script src="../js/main.js" defer></script>
+    <script src="../js/main-chart.js" defer></script>
 
     <!-- 돔트리가 생성후까지 대기시키는 명령어 defer -->
   </head>
@@ -40,12 +40,9 @@
         <div></div>
         <div></div>
       </div>
-      <ul>
-        <!-- <li>
-          <span class="region">대구</span>
-          <span class="incDec">410</span>
-        </li> -->
-      </ul>
+      <div class="chart-box">
+        <canvas class="chart"></canvas>
+      </div>
     </div>
   </body>
 </html>

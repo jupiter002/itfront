@@ -1,61 +1,80 @@
-// ajax(asynchronous javascript and xml)
-// console.log("01");
-// console.log("02");
-// setTimeout(()=>{
-//   console.log("03");
-
-// });
-
-const thumbsList = document.querySelector(".thumbs-box ul");
-const search = document.querySelector(".search");
-const btnSearch = document.querySelector(".btn-search");
-search.addEventListener("keyup", (e) => {
-  //엔터키 눌렀을때 이미지 불러오기
-  if (e.key === "Enter" || e.Keycode === 13) {
-    searchword = search.value; //apple
-    searchImg(searchword);
-  }
-});
-
-btnSearch.addEventListener("click", (e) => {
-  //엔터키 눌렀을때 이미지 불러오기
-  searchword = search.value; //apple
-  searchImg(searchword);
-});
-
-const removeItem = () => {
-  //이미지 불러올때마다 이미지리스트 초기화
-  const imgItem = document.querySelectorAll(".thumbs-box ul li");
+const ldsEllipsis = document.querySelector(".lds-ellipsis");
+const coronaList = document.querySelector(".coronaList ul");
+const remove = () => {
+  const imgItem = document.querySelectorAll(".coronaList ul li");
   imgItem.forEach((item, idx) => {
     item.remove();
   });
 };
 
-const searchImg = async (searchword) => {
-  // 기존 이미지 없애기...li태그 없애기
-  // promise   홍대역 8번출구() //약속이 이행되면 >fullfield 약속이 이행도지 않으면> rejected
-  removeItem();
-  const imgResponse = await fetch(`https://dapi.kakao.com/v2/search/image?query=apple${searchword}`, {
-    headers: { Authorization: "KakaoAK 0cb3626cfd41cc904af909ce97391d0a" },
-  });
-  const imgJson = await imgResponse.json();
-  const imgList = imgJson.documents;
-  // .catch(function (error) {
-  //   console.log(error);
-  // })
-  imgList.forEach(function (item, idx) {
+const loadCoronaData = async (date) => {
+  remove();
+  ldsEllipsis.classList.remove("off");
+  // jquery : select, manipulation, ajax (explorer)
+  // ios, android 동시에 사용 할 수 있게 만드는 프레임워크 react-native, flutter, angular, react, vue, (svelte)
+
+  const corona = await fetch(
+    `http://apis.data.go.kr/1352000/ODMS_COVID_04/callCovid04Api?serviceKey=nd9T52S050FnwVNNghjYFj%2B%2BQfEHhhumJhgt9Hj7RfjitJxTjw7U%2BXz1hhusmOrO%2BYTsYrSy9HO49Wfb4BJmZA%3D%3D&pageNo=1&numOfRows=500&apiType=JSON&std_day=${date}`
+  );
+  const response = await corona.json();
+
+  const items = response.items;
+  ldsEllipsis.classList.add("off");
+  const sortedItems = _.sortBy(items, ["gubun"]); //원본을 훼손하지 않는 메서드
+  // items.sort(function (a, b) {
+  //   if (a.incDec > b.incDec) return 1;
+  //   if (a.incDec === b.incDec) return 0;
+  //   if (a.incDec < b.incDec) return -1;
+  // });
+  sortedItems.forEach((item, idx) => {
+    // console.log(item.gubun + "====" + item.incDec);
     const li = document.createElement("li");
-    const img = document.createElement("img");
-    img.src = item.thumbnail_url; // 작은 이미지 파일경로
-    const a = document.createElement("a");
-    a.href = item.image_url; // 큰 이미지 파일경로
-    a.setAttribute("data-fancybox", "gallery");
-    a.append(img);
-    li.append(a);
-    thumbsList.append(li);
+    const region = document.createElement("span");
+    region.classList.add("region");
+    const incDec = document.createElement("span");
+    incDec.classList.add("incDec");
+
+    region.textContent = item.gubun;
+    incDec.textContent = item.incDec;
+    li.append(region);
+    li.append(incDec);
+    coronaList.append(li);
   });
-  gsap.from(".thumbsList li", { scale: 0, duration: 2, stagger: 0.02 });
-  Fancybox.bind('[data-fancybox="gallery"]', {
-    // Your custom options
-  });
+  gsap.from(".coronaList ul li", { scale: 0, duration: 0.5, stagger: 0.02 });
 };
+var picker = new Lightpick({
+  field: document.querySelector(".date-picker"),
+  format: "YY-MM-DD",
+  onSelect: function (date) {
+    // console.log(date.format("YYYY-MM-DD"));
+    loadCoronaData(date.format("YYYY-MM-DD"));
+  },
+});
+picker.setDate(new Date());
+// loadCoronaData("2023-05-30");
+const numbers = [1, 11, 2, 3, 4, 5, 44, 8];
+console.log(numbers.sort((a, b) => a - b));
+const chars = [1, "a", 3, "b"];
+
+console.log(chars.sort((a, b) => a - b));
+//오름차순 정렬
+
+//js에서 값을 정렬할때는 비교함수를 넣어줄것
+// if (a > b) return 1;
+// if (a === b) return 0;
+// if (a < b) return -1;
+const animals = ["chicken", "cat", "puppy"];
+const MyAnimals = animals;
+animals.push("camel");
+console.log(MyAnimals); //참조형 변수는 주소를 참조하기 때문에 Myanimal가 camel이 추가된 결과를 보여준다
+
+let a = 100;
+let b = a;
+a += 100;
+console.log(b + "===" + a); //일반변수는 주소를 참조하지 않기 때문에 값이 바뀐 a의 결과를 출력하지 않는다
+
+const person = { name: "아무개", age: "30" };
+const person2 = { nickName: "마동석", ...person }; //...spread operator >> 새로운 배열에 값을 복사함
+//배열 또는 객체의 원본을 훼손하지 않고 복사할때 많이 사용
+person.name = "장동건";
+console.log(person2); // 얕은 복사(shallow copy)

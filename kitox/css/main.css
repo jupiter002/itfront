@@ -1,3 +1,7 @@
+main {
+  color: #fff;
+  height: 100vh;
+}
 main-visual img {
   position: absolute;
   left: 0;
@@ -8,25 +12,44 @@ main-visual img {
      object-fit: cover;
   z-index: -1;
 }
-main .txt {
+main .visual-box {
   position: absolute;
-  display: block;
-  left: 250px;
-  top: 50%;
+  width: 100vw;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
 }
-main .txt .search {
+main .visual-box .txt {
+  display: block;
+  padding: 0 100px;
+  margin-top: 100px;
+}
+main .visual-box .txt .search {
   display: flex;
   align-items: center;
   margin: 10px 0;
 }
-main .txt input {
+main .visual-box .txt input {
   padding: 20px 100px;
   background-color: transparent;
   border: 5px solid #fff;
 }
-main .txt button {
+main .visual-box .txt button {
   background-color: #3481f5;
   border: 1px solid #3481f5;
   padding: 32px;
   border-radius: 0 0 10px 0;
+}
+main .visual-box .question {
+  height: 400px;
+  margin-left: 300px;
+  top: 50%;
+}
+main .visual-box .question .list {
+  height: 60%;
+}
+main .visual-box .question .list li {
+  padding: 40px;
+  background-color: #3481f5;
+  border-radius: 20px;
 }
