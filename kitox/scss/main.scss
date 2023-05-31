@@ -1,7 +1,7 @@
 @import "vars";
 @import "mixins";
 main {
-  color: #fff;
+  color: #161616;
   height: 100vh;
   &-visual {
     img {
@@ -55,4 +55,7 @@ main {
       }
     }
   }
+}
+.tech {
+  position: relative;
 }

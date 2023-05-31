@@ -1,5 +1,5 @@
 main {
-  color: #fff;
+  color: #161616;
   height: 100vh;
 }
 main-visual img {
@@ -52,4 +52,8 @@ main .visual-box .question .list li {
   padding: 40px;
   background-color: #3481f5;
   border-radius: 20px;
+}
+
+.tech {
+  position: relative;
 }
