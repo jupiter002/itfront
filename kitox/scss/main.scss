@@ -1,7 +1,9 @@
 @import "vars";
 @import "mixins";
 main {
-  .main-visual {
+  color: #fff;
+  height: 100vh;
+  &-visual {
     img {
       position: absolute;
       left: 0;
@@ -10,6 +12,47 @@ main {
       aspect-ratio: 1/0.5625;
       object-fit: cover;
       z-index: -1;
+    }
+  }
+  .visual-box {
+    position: absolute;
+    width: 100vw;
+    top: 30%;
+    display: flex;
+    justify-content: space-between;
+    .txt {
+      display: block;
+      padding: 0 100px;
+      margin-top: 100px;
+      .search {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+      input {
+        padding: 20px 100px;
+        background-color: transparent;
+        border: 5px solid #fff;
+      }
+      button {
+        background-color: #3481f5;
+        border: 1px solid #3481f5;
+        padding: 32px;
+        border-radius: 0 0 10px 0;
+      }
+    }
+    .question {
+      height: 400px;
+      margin-left: 300px;
+      top: 50%;
+      .list {
+        height: 60%;
+        li {
+          padding: 40px;
+          background-color: #3481f5;
+          border-radius: 20px;
+        }
+      }
     }
   }
 }

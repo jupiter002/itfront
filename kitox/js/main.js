@@ -21,21 +21,15 @@ window.addEventListener("scroll", () => {
   }
 });
 
-gsap.from(".main-visual .content .txt .char", { y: 100, opcaity: 0, ease: "power3", duration: 1, delay: 1 });
-
-new Swiper(".service .mask", {
-  slidesPerView: "auto",
+new Swiper(".visual-box .question", {
+  slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
   loopAdditionalSlides: 1,
-  navigation: {
-    prevEl: ".service .mask .btn-prev",
-    nextEl: ".service .mask .btn-next",
-  },
-  pagination: {
-    el: ".service .mask .pagination",
-    clickable: true,
-  },
+  // navigation: {
+  //   prevEl: ".service .mask .btn-prev",
+  //   nextEl: ".service .mask .btn-next",
+  // },
 });
 
 new Swiper(".partner .brand", {

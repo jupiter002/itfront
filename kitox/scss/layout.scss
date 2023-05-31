@@ -3,7 +3,7 @@
 .wrap {
   overflow: hidden;
   .header {
-    color: #fff;
+    color: #0a0a0a;
     position: fixed;
     width: 100%;
     left: 0;
@@ -38,11 +38,11 @@
       .header-main {
         margin: 20px;
         display: flex;
-        justify-content: space-between;
 
-        nav {
-          transform: translateX(-90%);
-          ul {
+        .gnb {
+          display: flex;
+          justify-content: center;
+          .list {
             display: flex;
             align-items: center;
             height: 100%;
@@ -56,7 +56,6 @@
       }
     }
     .gnb {
-      display: block;
       &:hover .depth {
         display: flex;
         color: black;
