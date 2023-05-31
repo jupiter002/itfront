@@ -39,10 +39,16 @@
         margin: 20px;
         display: flex;
 
+<<<<<<< HEAD
         .gnb {
           display: flex;
           justify-content: center;
           .list {
+=======
+        nav {
+          transform: translateX(-60%);
+          ul {
+>>>>>>> 669b806de0ce4df319bbb9225a3ac1bdc63725d6
             display: flex;
             align-items: center;
             height: 100%;
